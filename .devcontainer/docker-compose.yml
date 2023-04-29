@@ -1,0 +1,13 @@
+services:
+  expo-dev:
+    image: io.ghcr.bookingdlite.starter
+    build:
+      context: .
+      dockerfile: ./DockerFile
+    volumes:
+      - code:/root/workspace
+      # https://code.visualstudio.com/docs/remote/containers-advanced#_avoiding-extension-reinstalls-on-container-rebuild
+      - vs-server:/root/.vscode-server
+volumes:
+  vs-server: {}
+  code: {}
