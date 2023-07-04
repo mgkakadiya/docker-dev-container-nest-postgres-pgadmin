@@ -90,3 +90,14 @@ For open source projects, say how it is licensed.
 
 ## Project status
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+
+
+## Run Docker run. 
+cd .\.devcontainer\
+docker-compose up -d
+
+## Let's now run the command to stop and remove all running containers (this is necessary as we've made changes to the docker-compose.yml file)
+docker-compose down
+
+
+docker inspect fcc97e066cc8 | grep IPAddress
